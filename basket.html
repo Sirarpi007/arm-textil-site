@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Զամբյուղ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .back-button {
+
+            left: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        .basket-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .basket-section h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        #basket-items p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .basket-total {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .products {
+            padding: 20px;
+            text-align: center;
+        }
+        .products h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #777;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="back-button" onclick="window.history.back();">←</button>
+    <h1> Զամբյուղ</h1>
+</header>
+
+<section class="basket-section">
+    <h2>Զամբյուղ</h2>
+    <div id="basket-items">
+        <p>Զամբյուղը դատարկ է:</p>
+    </div>
+    <div class="basket-total">
+        <p>Ընդհանուր գումար՝ <span id="total-price">0</span> դրամ</p>
+    </div>
+</section>
+
+<section class="products">
+    <h2>Ապրանքներ</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://oshtorah.com/sites/default/files/images/20162407112145.jpg" height="300px" alt="Ապրանք 1">
+            <h3>Թափանցիկ արգանզայից վարագույր</h3>
+            <p>Գինը՝ 5000 դրամ</p>
+            <button class="btn add-to-basket" data-name="Ապրանք 1" data-price="5000">Ավելացնել զամբյուղ</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\user\Downloads\Telegram Desktop\photo_2024-11-27_21-53-06 (2).jpg" height="300px" alt="Ապրանք 2">
+            <h3>Նուրբ գունային համադրությամբ հավաքածու</h3>
+            <p>Գինը՝ 7000 դրամ</p>
+            <button class="btn add-to-basket" data-name="Ապրանք 2" data-price="7000">Ավելացնել զամբյուղ</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\user\Downloads\Telegram Desktop\photo_2024-11-27_21-53-02.jpg" height="300px" alt="Ապրանք 3">
+            <h3>Հարմարավետ սփռոց</h3>
+            <p>Գինը՝ 10000 դրամ</p>
+            <button class="btn add-to-basket" data-name="Ապրանք 3" data-price="10000">Ավելացնել զամբյուղ</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
